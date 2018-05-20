@@ -3,23 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-
-class weight extends operation
-{
-    read()
-    {
-        
-    }
-    
-    write()
-    {
-        
-    }
-    
-    menu()
-    {
-        $("#main_menu").hide();
-        $("#sub_wt").show();
-    }
-};
+/*
+angular.module('unit').controller('WT', function($scope, $http) {
+ 
+   $scope.menu = function()
+   {
+       
+   }
+   
+   $scope.read = function()
+   {
+       
+   }
+   
+   $scope.write = function()
+   {
+       
+   }
+ 
+ });*/

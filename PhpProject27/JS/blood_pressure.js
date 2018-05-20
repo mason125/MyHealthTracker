@@ -5,26 +5,21 @@
  */
 
 
- class blood_pressure extends operation
-{
-    //this function queries the database
-    read()
-    {
-       
-    }
-    //this function writes to the database
-    write()
+angular.module('unit').controller('BP', function($scope, $http) {
+    
+    $scope.menu = function()
     {
         
     }
-    //this launches the blood pressure menu
-    menu()
+    
+    $scope.read = function()
     {
-        $("#main_menu").hide();
-        $("#sub_bp").show();
+        alert("BP")
     }
-};
-
-const bp = new blood_pressure;
-//select submenu
-$("#bp_btn").on('click', () => bp.menu());
+    
+    $scope.write = function()
+    {
+        alert("BP")
+    }
+    
+});

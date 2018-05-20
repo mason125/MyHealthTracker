@@ -5,24 +5,16 @@
  */
 
 
-class blood_sugar extends operation
-{
-    read()
-    {
-        
-    }
-    
-    write()
-    {
-        
-    }
-    
-    menu()
-    {
-        $("#main_menu").hide();
-        $("#sub_bs").show();
-    }
-};
+angular.module('unit').controller('BS', function($scope, $http) {
 
-const bs = new blood_sugar;
-$("#bs_btn").on('click',()=> bs.menu());
+   $scope.read = function()
+   {
+       
+   }
+   
+   $scope.write = function()
+   {
+       alert("BS here")
+   }
+    
+}); 

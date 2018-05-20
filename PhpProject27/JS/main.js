@@ -3,39 +3,56 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+"use strict"
 
-class operation 
-{
-    static main()
+angular.module('unit').controller('operation', function($scope, $http) {
+
+    //turn on main menu
+    $scope.main = function()
     {
-        //hide sub menus
-        $("#sub_bp").hide();
-        $("#sub_bs").hide();
-        $("#sub_wt").hide();
-        
-        //show main menue
-        $("#main_menu").show();
-    }
-    
-    graph()
-    {
-        
-    }
-    
-    stats()
-    {
-        
-    }
-    
-    close_main()
-    {
-        
-    }
-    
-};
+       $("#main_menu").show();
+       $("#sub_wt").hide();
+       $("#sub_bs").hide();
+       $("#sub_bp").hide();
+   }
+   
+   //turn on bs menu
+   $scope.bs_menu = function()
+   {
+       $('#main_menu').hide();
+       $('#sub_bs').show();
+   }
+   
+   //turn on bp menu
+   $scope.bp_menu = function()
+   {
+       $('#main_menu').hide();
+       $('#sub_bp').show();
+   }
+   
+   //turn on weight menu
+   $scope.wt_menu = function()
+   {
+       $('#main_menu').hide();
+       $('#sub_wt').show();
+   }
+   
+   //show graph
+   $scope.graph = function()
+   {
+       
+   }
+   
+   //show stats
+   $scope.stats = function()
+   {
+       
+   }
+}); 
 
 
-
-operation.main();
-
-$("#home").on('click',()=>operation.main());
+        
+angular.module('unit').controller('start', function($scope, $http) {
+    
+        $scope.main();
+});
